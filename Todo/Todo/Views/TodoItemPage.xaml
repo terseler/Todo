@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="Todo.Views.TodoItemPage"
+Title="{Binding Name}" BackgroundColor="#EFECA0">
+    <StackLayout Margin="20"
+VerticalOptions="StartAndExpand">
+        <Label Text="Name" FontFamily="monospace" FontSize="18"/>
+        <Entry Text="{Binding Name}" FontFamily="monospace" FontSize="22"/>
+        <Label Text="Notes" FontFamily="monospace" FontSize="18"/>
+        <Entry Text="{Binding Notes}" FontFamily="monospace" FontSize="22"/>
+        <Label Text="Done" FontFamily="monospace" FontSize="18"/>
+        <Switch IsToggled="{Binding Done}" />
+        <Button Text="Save" FontFamily="monospace" FontSize="18" BackgroundColor="#84D54F"
+Clicked="OnSaveClicked" />
+        <Button Text="Delete" FontFamily="monospace" FontSize="18" BackgroundColor="Red"
+Clicked="OnDeleteClicked" />
+        <Button Text="Cancel" FontFamily="monospace" FontSize="18" BackgroundColor="White"
+Clicked="OnCancelClicked" />
+    </StackLayout>
+</ContentPage>
